@@ -2,3 +2,8 @@ welcome: Welcome to memory game. I'm going to say three numbers for you to repea
 round: Can you repeat the numbers {{ numbers|join(", ") }} backwards?
 win: Good job!
 lose: Sorry, that's the wrong answer.
+first: There was a time a small ogre who was sad because he was really small.
+second: The ogre decided to make a wish to a powerful wizard that lived in the forest.
+third: After many considerations the ogre started the journey to the black forest where the wizard lived.
+fourth: After a long joruney the ogre finally found the place where the wizard had a small cabin in the middle of the forest.
+fifth: The ogre was afraid of the wizard but he decided that he really wanted to grow so he entered the cabin.
