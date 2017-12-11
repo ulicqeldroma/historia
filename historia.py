@@ -17,6 +17,10 @@ def new_game():
 def firstPart():
 	part_msg = render_template('first')
 	return statement(part_msg)
+
+@ask.secondPart("SecondPart")
+	sec_part = render_template('second')
+	return statement(sec_part)
 	
 
 
