@@ -20,6 +20,7 @@ def firstPart():
 
 @ask.secondPart("SecondPart")
 	sec_part = render_template('second')
+	//Something
 	return statement(sec_part)
 	
 
