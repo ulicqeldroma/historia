@@ -1,9 +1,31 @@
-welcome: Welcome to memory game. I'm going to say three numbers for you to repeat backwards. Ready?
-round: Can you repeat the numbers {{ numbers|join(", ") }} backwards?
-win: Good job!
-lose: Sorry, that's the wrong answer.
-first: There was a time a small ogre who was sad because he was really small.
-second: The ogre decided to make a wish to a powerful wizard that lived in the forest.
-third: After many considerations the ogre started the journey to the black forest where the wizard lived.
-fourth: After a long joruney the ogre finally found the place where the wizard had a small cabin in the middle of the forest.
-fifth: The ogre was afraid of the wizard but he decided that he really wanted to grow so he entered the cabin.
+first: "Im glad you could make it. I didn’t think... I didn’t think you were coming.”
+second: Yeserday I miss to ask your name, sorry... What's your name?
+//name to be added
+third: Oh {name}, now I remember I did ask!, but just wanted to make sure {insert laught}
+fourth: [name], do you want to play a game?
+//yes or no - Selection
+fifth: The game is "a Silly Story Telling", Im going to tell a story and you will help me to complete it
+sixth: Are you ready {name}?
+//yes or no - Selection
+seventh:Once upon a time, there was a little girl who used to loves Candies!
+eighth: One day, her mom took her to a Candy Shop, it was like a paradise, candies of every color and flavor.
+ninth: Mom ask me to pick only 1 type of candies. What candies should I choose? What will you choose?
+tenth: Cotton Candy? Chocolate? Popsicles?
+// Selection
+Eleventh: {Selection} is a really good choice!, that was the one I got!
+Twelfth: With {Selection} in my hand, I was so exited and start eating them.
+Thirteenth: Mom ask me to save some for another day. What do you think I did? ("ate them all" OR "save some"?
+// Selection
+Fourteenth: Offcourse I {selection} ... But later that day I regret it!
+Fifteenth: I start feeling sick, my stomach hurts.
+Sixteenth: {name},Do you think I ate lot's of candies? 
+//yes or no - Selection
+Seventeenth: Mmm well... I don't know if that's true or maybe yes
+Eighteenth: But I felt really sick, that much sick that I don't want to see candies anymore
+Nineteenth: {name}, do you think I should eat candies in the future?
+// yes or no - selection
+Twentieth: I'm going to think about It, I do really liked candies.
+TwientyFirst: But I will remember that I will get sick if I eat lot's of candies
+TwientySecond: {name}, did you like my story?
+//yes or no - selection
+TwientyThird: Thanks, next time I will have a better story! Bye!
