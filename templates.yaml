@@ -1,31 +1,6 @@
-first: "Im glad you could make it. I didn’t think... I didn’t think you were coming.”
-second: Yeserday I miss to ask your name, sorry... What's your name?
-//name to be added
-third: Oh {name}, now I remember I did ask!, but just wanted to make sure {insert laught}
-fourth: [name], do you want to play a game?
-//yes or no - Selection
-fifth: The game is "a Silly Story Telling", Im going to tell a story and you will help me to complete it
-sixth: Are you ready {name}?
-//yes or no - Selection
-seventh:Once upon a time, there was a little girl who used to loves Candies!
-eighth: One day, her mom took her to a Candy Shop, it was like a paradise, candies of every color and flavor.
-ninth: Mom ask me to pick only 1 type of candies. What candies should I choose? What will you choose?
-tenth: Cotton Candy? Chocolate? Popsicles?
-// Selection
-Eleventh: {Selection} is a really good choice!, that was the one I got!
-Twelfth: With {Selection} in my hand, I was so exited and start eating them.
-Thirteenth: Mom ask me to save some for another day. What do you think I did? ("ate them all" OR "save some"?
-// Selection
-Fourteenth: Offcourse I {selection} ... But later that day I regret it!
-Fifteenth: I start feeling sick, my stomach hurts.
-Sixteenth: {name},Do you think I ate lot's of candies? 
-//yes or no - Selection
-Seventeenth: Mmm well... I don't know if that's true or maybe yes
-Eighteenth: But I felt really sick, that much sick that I don't want to see candies anymore
-Nineteenth: {name}, do you think I should eat candies in the future?
-// yes or no - selection
-Twentieth: I'm going to think about It, I do really liked candies.
-TwientyFirst: But I will remember that I will get sick if I eat lot's of candies
-TwientySecond: {name}, did you like my story?
-//yes or no - selection
-TwientyThird: Thanks, next time I will have a better story! Bye!
+first: I am glad you could make it. I did not think you were coming. Yesterday I missed to ask your gender, sorry... Are you a boy or a girl?
+boy: Hey boy you rock. Mom ask me to pick only 1 type of candies. What candies should I choose? What will you choose, Cotton Candy? Chocolate? Popsicles?
+girl: Yes girl power. Mom ask me to pick only 1 type of candies. What candies should I choose? What will you choose, Cotton Candy? Chocolate? Popsicles?
+selection: Hey {{ gender }} you selected {{ candy }} and that was the one I also got. Mom asked me to save some for other day. What do you think I did? Did I ate them all or did I save some?
+alot: But later that day I regret it! I start feeling sick, my stomach hurts.
+savesome: I remembered that I cab get sick if I eat lots of candies
