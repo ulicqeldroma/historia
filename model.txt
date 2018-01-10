@@ -1,0 +1,231 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "CustomAmount",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "lot",
+              "synonyms": [
+                "lot",
+                "all"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "some",
+              "synonyms": [
+                "save",
+                "few",
+                "little"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "CustomCandy",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "cotton candy",
+              "synonyms": [
+                "candy",
+                "cotton"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "chocolate",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "popsicles",
+              "synonyms": []
+            }
+          }
+        ]
+      },
+      {
+        "name": "CustomGenero",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "boy",
+              "synonyms": [
+                "fellow",
+                "guy",
+                "lad",
+                "dude",
+                "boy"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "girl",
+              "synonyms": [
+                "lady",
+                "lassie",
+                "schoogirl",
+                "girl"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "Cuarto",
+        "samples": [
+          "a {amount}",
+          "i ate a {amount}",
+          "i had {amount}",
+          "i ate them {amount}"
+        ],
+        "slots": [
+          {
+            "name": "amount",
+            "type": "CustomAmount"
+          }
+        ]
+      },
+      {
+        "name": "Inicio",
+        "samples": [
+          "read a bed story",
+          "open bed story",
+          "start bed story"
+        ],
+        "slots": []
+      },
+      {
+        "name": "Segundo",
+        "samples": [
+          "I am {gender}",
+          "a {gender}"
+        ],
+        "slots": [
+          {
+            "name": "gender",
+            "type": "CustomGenero",
+            "samples": [
+              "I am a {gender}",
+              "{gender}"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tercero",
+        "samples": [
+          "i want {candy}",
+          "a {candy}"
+        ],
+        "slots": [
+          {
+            "name": "candy",
+            "type": "CustomCandy",
+            "samples": [
+              "{candy}",
+              "I choose {candy}",
+              "I want {candy}"
+            ]
+          }
+        ]
+      }
+    ],
+    "invocationName": "bed story"
+  },
+  "prompts": [
+    {
+      "id": "Elicit.Intent-Segundo.IntentSlot-gender",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "are you a boy or a girl?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-Segundo.IntentSlot-gender",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "so you are a {gender} right?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-Tercero.IntentSlot-candy",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Will you choose cotton candy, chocolate or popsicles?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "intents": [
+      {
+        "name": "Segundo",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "gender",
+            "type": "CustomGenero",
+            "elicitationRequired": true,
+            "confirmationRequired": true,
+            "prompts": {
+              "elicitation": "Elicit.Intent-Segundo.IntentSlot-gender",
+              "confirmation": "Confirm.Intent-Segundo.IntentSlot-gender"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Tercero",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "candy",
+            "type": "CustomCandy",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-Tercero.IntentSlot-candy"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
