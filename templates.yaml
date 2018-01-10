@@ -1,6 +1,46 @@
-first: I am glad you could make it. I did not think you were coming. Yesterday I missed to ask your gender, sorry... Are you a boy or a girl?
-boy: Hey boy you rock. Mom ask me to pick only 1 type of candies. What candies should I choose? What will you choose, Cotton Candy? Chocolate? Popsicles?
-girl: Yes girl power. Mom ask me to pick only 1 type of candies. What candies should I choose? What will you choose, Cotton Candy? Chocolate? Popsicles?
-selection: Hey {{ gender }} you selected {{ candy }} and that was the one I also got. Mom asked me to save some for other day. What do you think I did? Did I ate them all or did I save some?
-alot: But later that day I regret it! I start feeling sick, my stomach hurts.
-savesome: I remembered that I cab get sick if I eat lots of candies
+first: |
+    <speak>
+        <audio src='https://s3.amazonaws.com/introaudio/intro1.mp3' />
+        Welcome to interactive bed time story ! 
+        I'd like to tell you a small story before you go to sleep. 
+        It's way too dark in the cloud, I can't see.
+        To make this story more fun, please think of a made up name.
+        Ready ? 
+        What is your made-up name ? 
+    </speak>
+name: |
+    <speak>
+        Hey {{ name }}, that's a unique name.
+        Is that a boy or girl name ? 
+    </speak>
+boy: |
+    <speak>
+        {{ name }}, Listen carefully young gentleman. We have 2 stories to choose from. Would you like to hear a spooky story or a normal story ? Which story do you want to hear ?
+    </speak>
+girl: |
+    <speak>
+        Princess {{ name }}. We have 2 stories to choose from. Would you like to hear a spooky story or a normal story ? Which story do you want to hear ?
+    </speak>
+spooky: |
+  <speak>
+      In a stormy, creepy night
+      The old man gets up
+      Grabs his butter knife
+      And he spreads the Nutella on his toast 
+  </speak>
+normal: |
+  <speak>
+      This is the normal story
+  </speak>
+selection: |
+    <speak>
+        Hey {{ gender }} you selected {{ candy }} and that was the one I also got. Mom asked me to save some for other day. What do you think I did? Did I ate them all or did I save some?
+    </speak>
+alot: |
+    <speak>
+        But later that day I regret it! I start feeling sick, my stomach hurts.
+    </speak>
+savesome: |
+    <speak>
+        I remembered that I cab get sick if I eat lots of candies
+    </speak>

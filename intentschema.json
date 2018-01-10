@@ -1,0 +1,306 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "CustomAmount",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "lot",
+              "synonyms": [
+                "lot",
+                "all"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "some",
+              "synonyms": [
+                "save",
+                "few",
+                "little"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "CustomCandy",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "cotton candy",
+              "synonyms": [
+                "candy",
+                "cotton"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "chocolate",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "popsicles",
+              "synonyms": []
+            }
+          }
+        ]
+      },
+      {
+        "name": "CustomGenero",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "boy",
+              "synonyms": [
+                "fellow",
+                "guy",
+                "lad",
+                "dude",
+                "boy"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "girl",
+              "synonyms": [
+                "lady",
+                "lassie",
+                "schoogirl",
+                "girl"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "CustomStory",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "spooky",
+              "synonyms": [
+                "spooky"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "normal",
+              "synonyms": []
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.PauseIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.ResumeIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "Cuarto",
+        "samples": [
+          "a {amount}",
+          "i ate a {amount}",
+          "i had {amount}",
+          "i ate them {amount}"
+        ],
+        "slots": [
+          {
+            "name": "amount",
+            "type": "CustomAmount"
+          }
+        ]
+      },
+      {
+        "name": "Inicio",
+        "samples": [
+          "read a bed story",
+          "open bed story",
+          "start bed story"
+        ],
+        "slots": []
+      },
+      {
+        "name": "Name_Intent",
+        "samples": [
+          "my name is {name}",
+          "name is {name}",
+          "it is {name}"
+        ],
+        "slots": [
+          {
+            "name": "name",
+            "type": "AMAZON.Person"
+          }
+        ]
+      },
+      {
+        "name": "Segundo",
+        "samples": [
+          "I am {gender}",
+          "a {gender}"
+        ],
+        "slots": [
+          {
+            "name": "gender",
+            "type": "CustomGenero",
+            "samples": [
+              "I am a {gender}",
+              "{gender}"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "story_selection",
+        "samples": [
+          "a {story} story",
+          "I want to hear a {story} story",
+          "a {story} one"
+        ],
+        "slots": [
+          {
+            "name": "story",
+            "type": "CustomStory",
+            "samples": [
+              "a {story}"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tercero",
+        "samples": [
+          "i want {candy}",
+          "a {candy}"
+        ],
+        "slots": [
+          {
+            "name": "candy",
+            "type": "CustomCandy",
+            "samples": [
+              "{candy}",
+              "I choose {candy}",
+              "I want {candy}"
+            ]
+          }
+        ]
+      }
+    ],
+    "invocationName": "bed time"
+  },
+  "prompts": [
+    {
+      "id": "Elicit.Intent-Segundo.IntentSlot-gender",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "are you a boy or a girl?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-story_selection.IntentSlot-story",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What story will you choose ?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-Tercero.IntentSlot-candy",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Will you choose cotton candy, chocolate or popsicles?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "intents": [
+      {
+        "name": "Segundo",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "gender",
+            "type": "CustomGenero",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-Segundo.IntentSlot-gender"
+            }
+          }
+        ]
+      },
+      {
+        "name": "story_selection",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "story",
+            "type": "CustomStory",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-story_selection.IntentSlot-story"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Tercero",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "candy",
+            "type": "CustomCandy",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-Tercero.IntentSlot-candy"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
