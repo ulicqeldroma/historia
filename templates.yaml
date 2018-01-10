@@ -1,6 +1,20 @@
-first: I am glad you could make it. I did not think you were coming. Yesterday I missed to ask your gender, sorry... Are you a boy or a girl?
-boy: Hey boy you rock. Mom ask me to pick only 1 type of candies. What candies should I choose? What will you choose, Cotton Candy? Chocolate? Popsicles?
-girl: Yes girl power. Mom ask me to pick only 1 type of candies. What candies should I choose? What will you choose, Cotton Candy? Chocolate? Popsicles?
-selection: Hey {{ gender }} you selected {{ candy }} and that was the one I also got. Mom asked me to save some for other day. What do you think I did? Did I ate them all or did I save some?
-alot: But later that day I regret it! I start feeling sick, my stomach hurts.
-savesome: I remembered that I cab get sick if I eat lots of candies
+first: |
+    <speak>I am glad you could make it <break time="500ms"/> I did not think you were coming <break time="500ms"/> Yesterday I missed to ask your gender <break time="500ms"/> sorry <break time="500ms"/> Are you a boy or a girl?</speak>
+boy: |
+    Hey boy you rock. Mom ask me to pick only 1 type of candies. What candies should I choose? What will you choose, Cotton Candy? Chocolate? Popsicles?
+girl: |
+    Yes girl power. Mom ask me to pick only 1 type of candies. What candies should I choose? What will you choose, Cotton Candy? Chocolate? Popsicles?
+selection: |
+    Hey {{ gender }} you selected {{ candy }} and that was the one I also got. Mom asked me to save some for other day. What do you think I did? Did I ate them all or did I save some?
+alot: |
+    But later that day I regret it! I start feeling sick, my stomach hurts.
+savesome: |
+    I remembered that I cab get sick if I eat lots of candies.
+regular1: |
+    <speak>My digital dog cloudy wants to make a small trip <break time="500ms"/> He has two choices <break time="300ms"/> Going to the park or going to the forest <break time="300ms"/> Where should he go?</speak>
+regularpark: |
+    <speak>Excellent choice. Cloudy really loves taking a walk in the park. But know Cloudy has another pickle. What toy should cloudy bring into the park. Should he bring a funny bone or an old plastic duck?</speak>
+regularforest: |
+    <speak>I love the forest and so does Cloudy as he loves trees. But know Cloudy has another pickle. What toy should cloudy bring into the forest. Should he bring a funny bone or an old plastic duck?</speak>
+regular4: |
+    <speak></speak>
