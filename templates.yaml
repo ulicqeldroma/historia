@@ -1,9 +1,48 @@
-welcome: Welcome to memory game. I'm going to say three numbers for you to repeat backwards. Ready?
-round: Can you repeat the numbers {{ numbers|join(", ") }} backwards?
-win: Good job!
-lose: Sorry, that's the wrong answer.
-first: There was a time a small ogre who was sad because he was really small.
-second: The ogre decided to make a wish to a powerful wizard that lived in the forest.
-third: After many considerations the ogre started the journey to the black forest where the wizard lived.
-fourth: After a long joruney the ogre finally found the place where the wizard had a small cabin in the middle of the forest.
-fifth: The ogre was afraid of the wizard but he decided that he really wanted to grow so he entered the cabin.
+first: |
+    <speak>
+        <audio src='https://s3.amazonaws.com/introaudio/intro1.mp3' />
+        Welcome to interactive bed time story ! 
+        I'd like to tell you a small story before you go to sleep. 
+        It's way too dark in the cloud, I can't see.
+        To make this story more fun, please think of a made up name.
+        Ready ? 
+        What is your made-up name ? 
+    </speak>
+name: |
+    <speak>
+        Hey {{ name }}, that's a unique name.
+        Is that a boy or girl name ? 
+    </speak>
+boy: |
+    <speak>
+        {{ name }}, Listen carefully young gentleman. We have 2 stories to choose from. Would you like to hear a spooky story or a normal story ? Which story do you want to hear ?
+    </speak>
+girl: |
+    <speak>
+        Princess {{ name }}. We have 2 stories to choose from. Would you like to hear a spooky story or a normal story ? Which story do you want to hear ?
+    </speak>
+spooky: |
+  <speak>
+      In a stormy, creepy night
+      The old man gets up
+      Grabs his butter knife
+      And he spreads the Nutella on his toast 
+  </speak>
+normal: |
+  <speak>
+      This is the normal story
+  </speak>
+selection: |
+    <speak>
+        Hey {{ gender }} you selected {{ candy }} and that was the one I also got. Mom asked me to save some for other day. What do you think I did? Did I ate them all or did I save some?
+    </speak>
+alot: |
+    <speak>
+        But later that day I regret it! I start feeling sick, my stomach hurts.
+    </speak>
+savesome: |
+    <speak>
+        I remembered that I cab get sick if I eat lots of candies
+    </speak>
+
+  
