@@ -1,15 +1,5 @@
-import logging
-from random import randint
-from flask import Flask, render_template
-from flask_ask import Ask, statement, question, session
-
-app = Flask(__name__)
-ask = Ask(app, "/")
-
-logging.getLogger("flask_ask").setLevel(logging.DEBUG)
-
-@ask.launch
-def new_history():
+@ask.launched
+def old_history():
     welcome_msg = render_template('first')
     return question(welcome_msg).reprompt("Sorry I didn't get that. Are you a boy or a girl?")
 
@@ -39,6 +29,3 @@ def terPart(hunger):
 	else :
 		ter_part = render_template('alot')
 	return statement(ter_part)
-
-if __name__ == '__main__':
-    app.run(debug=True)
